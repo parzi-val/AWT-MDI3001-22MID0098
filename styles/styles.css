@@ -1,9 +1,9 @@
-
 body {
     background-color: rgb(27, 27, 27);
     color: white;
     font-family: 'JetBrains Mono';
+    margin-left: 40px;
 }
-nav a {
-    color: white;
+a {
+    color:aqua
 }

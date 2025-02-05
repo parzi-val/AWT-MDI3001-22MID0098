@@ -2,26 +2,30 @@
 <html>
 <head>
     <title>Projects</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
     <header>
-        <nav style="color: white">
-            <a style="color: white" href="../index.html">Tasks</a> &gt; 
-            <a style="color: white" href="index.html">Home</a> &gt; 
+        <nav class="dark-theme">
+            <a href="../index.html">Tasks</a> &gt; 
+            <a href="index.html">Home</a> &gt; 
             <span>Projects</span>
         </nav>
         <br>
-        <nav style="color: white;">
-            <a style="color: white"href="index.html">Home</a> |
-            <a style="color: white" href="projects.html">Projects</a> |
-            <a style="color: white" href="contact.html">Contact</a> |
-
+        <nav class="dark-theme">
+            <a href="index.html">Home</a> |
+            <a href="projects.html">Projects</a> |
+            <a href="contact.html">Contact</a> |
+            <button onclick="toggleDarkMode()" style="cursor: pointer;">
+                Toggle Dark Mode
+            </button>
         </nav>
     </header>
 </head>
-<body style="background-color: rgb(27, 27, 27);color: white;font-family: 'JetBrains Mono';margin-left: 40px;">
+<body>
     <div style="max-width: 800px;">
-    <h1 style="color:aqua"><dfn>projects</dfn></h1>
+    <h1 id="page_head"><dfn>projects</dfn></h1>
     <dl>
-        <dt>🔗<a style="color: rgb(25, 160, 201);" href="https://github.com/coderman400/de-mesp"><b><dfn>De-Mesp</dfn></b> — <em>Sep 2024</em></a></dt>
+        <dt>🔗<a href="https://github.com/coderman400/de-mesp"><b><dfn>De-Mesp</dfn></b> — <em>Sep 2024</em></a></dt>
         <dd>
         <p style="text-align: justify; ">
             This project is a decentralized AI marketplace focused on the validation of
@@ -34,7 +38,7 @@
         </dd>
     </dl>
     <dl>
-        <dt>🔗<a style="color: rgb(25, 160, 201);" href="https://github.com/parzi-val/devspeaks"><b><dfn>devspeaks</dfn></b> — <em>Jan 2024 - Apr 2024</em></a></dt>
+        <dt>🔗<a href="https://github.com/parzi-val/devspeaks"><b><dfn>devspeaks</dfn></b> — <em>Jan 2024 - Apr 2024</em></a></dt>
         <dd>
         <p style="text-align: justify; ">
             DevSpeaks is a Room Based Forum application built for a community
@@ -46,7 +50,7 @@
         </dd>
     </dl>
     <dl>
-        <dt>🔗<a style="color: rgb(25, 160, 201);" href="https://github.com/parzi-val/activity-planner"><b><dfn>Vacation Planner</dfn></b> — <em>Mar 2024</em></a></dt>
+        <dt>🔗<a href="https://github.com/parzi-val/activity-planner"><b><dfn>Vacation Planner</dfn></b> — <em>Mar 2024</em></a></dt>
         <dd>
         <p style="text-align: justify; ">
             Vacation planner is a website which gives an itinerary based on the input
@@ -58,7 +62,7 @@
         </dd>
     </dl>
     <dl>
-        <dt>🔗<a style="color: rgb(25, 160, 201);" href="https://github.com/parzi-val/kanban-board"><b><dfn>Kanban</dfn></b> — <em>Mar 2024</em></a></dt>
+        <dt>🔗<a href="https://github.com/parzi-val/kanban-board"><b><dfn>Kanban</dfn></b> — <em>Mar 2024</em></a></dt>
         <dd>
         <p style="text-align: justify; ">
             Kanban is a cli tool for creating and managing Kanban boards.

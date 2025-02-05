@@ -2,24 +2,29 @@
 <html>
 <head>
     <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
     <header>
-        <nav style="color: white">
-            <a style="color: white" href="../index.html">Tasks</a> &gt; 
-            <a style="color: white" href="index.html">Home</a> &gt; 
+        <nav class="dark-theme">
+            <a href="../index.html">Tasks</a> &gt; 
+            <a href="index.html">Home</a> &gt; 
             <span>Biodata</span>
         </nav>
         <br>
-        <nav style="color: white;">
-            <a style="color: white"href="index.html">Home</a> |
-            <a style="color: white" href="projects.html">Projects</a> |
-            <a style="color: white" href="contact.html">Contact</a> |
+        <nav class="dark-theme">
+            <a href="index.html">Home</a> |
+            <a href="projects.html">Projects</a> |
+            <a href="contact.html">Contact</a> |
+            <button onclick="toggleDarkMode()" style="cursor: pointer;">
+                Toggle Dark Mode
+            </button>
 
         </nav>
     </header>
 </head>
-<body style="background-color: rgb(27, 27, 27);color: white;font-family: 'JetBrains Mono';margin-left: 40px;">
-<div style="max-width: 800px;">
-    <label title="KR Balasubramanian"><h1><dfn>bala</dfn></h1></label>
+<body>
+<div id="profile">
+    <label title="KR Balasubramanian"><h1 id="page_head"><dfn>bala</dfn></h1></label>
     <blockquote style="text-align: justify;">
         Talented Software Developer equipped with great coding, debugging and
         project management abilities. Accomplishes project goals consistently with
@@ -29,7 +34,7 @@
     <br>
 </div>
 <div>
-    <h2 style="color:aqua"><dfn>education</dfn></h2>
+    <h2 id="page_head"><dfn>education</dfn></h2>
     <blockquote>
     <dl>
         <dt><b>Vellore Institute of Technology, Vellore</b> — <em>Integrated
@@ -56,40 +61,40 @@
     <br>
 </div>
 <div>
-    <h2 style="color:aqua"><dfn>skills</dfn></h2>
+    <h2 id="page_head"><dfn>skills</dfn></h2>
     <blockquote>
-    <table style="border: 1px solid black; background: rgb(34, 33, 33);">
+    <table>
         <tr>
-            <td style="padding: 8px;"><label><strong>python</strong></label></td>
+            <td><label><strong>python</strong></label></td>
             <td><progress value="98" max="100"></progress></td>
-            <td style="padding: 8px;"><span>98%</span></td>
-            <td style="padding: 8px;"><label><strong>ai/ml</strong></label></td>
+            <td><span>98%</span></td>
+            <td><label><strong>ai/ml</strong></label></td>
             <td><progress value="75" max="100"></progress></td>
-            <td style="padding: 8px;"><span>75%</span></td>
+            <td><span>75%</span></td>
         </tr>
         <tr>
-            <td style="padding: 8px;"><label><strong>JavaScript</strong></label></td>
+            <td><label><strong>JavaScript</strong></label></td>
             <td><progress id="skill2" value="85" max="100"></progress></td>
-            <td style="padding: 8px;"><span>85%</span></td>
-            <td style="padding: 8px;"><label><strong>MERN</strong></label></td>
+            <td><span>85%</span></td>
+            <td><label><strong>MERN</strong></label></td>
             <td><progress id="skill2" value="85" max="100"></progress></td>
-            <td style="padding: 8px;"><span>85%</span></td>
+            <td><span>85%</span></td>
         </tr>
         <tr>
-            <td style="padding: 8px;"><label><strong>c/c++</strong></label></td>
+            <td><label><strong>c/c++</strong></label></td>
             <td><progress  value="90" max="100"></progress></td>
-            <td style="padding: 8px;"><span>90%</span></td>
-            <td style="padding: 8px;"><label><strong>rust</strong></label></td>
+            <td><span>90%</span></td>
+            <td><label><strong>rust</strong></label></td>
             <td><progress  value="80" max="100"></progress></td>
-            <td style="padding: 8px;"><span>80%</span></td>
+            <td><span>80%</span></td>
         </tr>
         <tr>
-            <td style="padding: 8px;"><label><strong>java</strong></label></td>
+            <td><label><strong>java</strong></label></td>
             <td><progress  value="95" max="100"></progress></td>
-            <td style="padding: 8px;"><span>95%</span></td>
-            <td style="padding: 8px;"><label><strong>docker</strong></label></td>
+            <td><span>95%</span></td>
+            <td><label><strong>docker</strong></label></td>
             <td><progress  value="95" max="100"></progress></td>
-            <td style="padding: 8px;"><span>95%</span></td>
+            <td><span>95%</span></td>
         </tr>
     </table>
     </blockquote>

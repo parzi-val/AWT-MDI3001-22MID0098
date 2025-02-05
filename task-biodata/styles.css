@@ -1,0 +1,75 @@
+body {
+    background-color: rgb(27, 27, 27);
+    font-family: 'JetBrains Mono';
+    color: white;
+    margin-left: 40px;
+}
+
+.light-mode {
+    background-color: white !important;
+    color: black !important;
+}
+
+
+.light-mode a {
+    background-color: white !important;
+    color: blue !important;
+}
+
+#profile{
+    max-width: 800px;
+}
+
+a{
+    background-color: rgb(27, 27, 27);
+    color: white;
+}
+
+#socials, dt > a{
+    color: rgb(25, 160, 201);
+}
+
+#page_head{
+  color:aqua;  
+}
+
+blockquote > table{
+    border: 1px solid black; 
+    background: rgb(34, 33, 33)
+}
+
+.light-mode blockquote > table{
+    background: white;
+}
+
+td{
+    padding: 8px;
+}
+
+#name_url{
+    color: rgb(25, 201, 128)
+}
+
+input {
+    background-color: rgb(34, 33, 33);
+    border: 1px solid black;
+    color: white;
+}
+
+.light-mode input {
+    background-color: white;
+    color: black;
+}
+
+textarea
+{
+    background-color: rgb(34, 33, 33);
+    border: 1px solid black;
+    color: white;
+}
+
+.light-mode textarea
+{
+    background-color: white;
+    color: black;
+}

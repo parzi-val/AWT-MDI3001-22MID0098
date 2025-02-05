@@ -2,34 +2,49 @@
     <html>
     <head>
         <title>Contact</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="script.js"></script>
         <header>
-            <nav style="color: white">
-                <a style="color: white" href="../index.html">Tasks</a> &gt; 
-                <a style="color: white" href="index.html">Home</a> &gt; 
+            <nav class="dark-theme">
+                <a href="../index.html">Tasks</a> &gt; 
+                <a href="index.html">Home</a> &gt; 
                 <span>Contact</span>
             </nav>
             <br>
-            <nav style="color: white;">
-                <a style="color: white"href="index.html">Home</a> |
-                <a style="color: white" href="projects.html">Projects</a> |
-                <a style="color: white" href="contact.html">Contact</a> |
-
+            <nav class="dark-theme">
+                <a  href="index.html">Home</a> |
+                <a  href="projects.html">Projects</a> |
+                <a  href="contact.html">Contact</a> |
+                <button onclick="toggleDarkMode()" style="cursor: pointer;">
+                    Toggle Dark Mode
+                </button>
             </nav>
         </header>
     </head>
-    <body style="background-color: rgb(27, 27, 27);color: white;font-family: 'JetBrains Mono';margin-left: 40px;">
+    <body>
+        <h2 id="page_head">Contact Us</h2>
+        <form action="mailto:altkrbala@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset">
+        </form>
         <br>
         <br>
         <address>
-            Made by <a style="color: rgb(25, 201, 128);" href="mailto:altkrbala@gmail.com">KR Balasubramanian</a>.<br>
+            Made by <a id="name_url" href="mailto:altkrbala@gmail.com">KR Balasubramanian</a>.<br>
             Visit us at:<br>
             123 Example Street, Example City, Country<br>
             Phone: +1 234 567 890
         </address>
         <h3>Links</h3>
         <ul>
-            <li><a style="color: rgb(25, 160, 201);" href="https://github.com/parzi-val">github</a></li>
-            <li><a style="color: rgb(25, 160, 201);" href="https://www.linkedin.com/in/balasubramanian-kr-7424a5222/">linkedin</a></li>
+            <li><a id="socials" href="https://github.com/parzi-val">github</a></li>
+            <li><a id="socials" href="https://www.linkedin.com/in/balasubramanian-kr-7424a5222/">linkedin</a></li>
         </ul>
         
     </body>

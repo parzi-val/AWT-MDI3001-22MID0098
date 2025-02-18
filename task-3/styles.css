@@ -5,7 +5,8 @@ body {
     margin-left: 40px;
 }
 
-a{
+nav,
+a {
     background-color: rgb(27, 27, 27);
-    color: white;
+    color: cyan;
 }

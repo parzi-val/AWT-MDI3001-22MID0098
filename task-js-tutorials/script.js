@@ -11,12 +11,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         } else {
             myHeader.innerHTML = "Button was clicked again"
         }
-        if (counter > 10) {
-            myHeader.innerHTML = "Button is being harrased"
-        }
-        if (counter > 20) {
-            myHeader.innerHTML = "Button has gratified"
-        }
         counter++
     });
 });

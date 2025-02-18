@@ -5,48 +5,50 @@ body {
     margin-left: 40px;
 }
 
-nav, a{
-    color: white;
+nav,
+a {
+    background-color: rgb(27, 27, 27);
+    color: cyan;
 }
 
 #container {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
-    padding:10px;
-    padding-top:20px;
+    padding: 10px;
+    padding-top: 20px;
 }
 
-.teamlabeltext{
+.teamlabeltext {
     font-size: medium;
-    display:block;
-    padding-top:10px
+    display: block;
+    padding-top: 10px
 }
 
-.labeltext{
-    font-size:small;
-    display:inline-block;
+.labeltext {
+    font-size: small;
+    display: inline-block;
 }
 
-.labelpad{
-    padding-right:8px
+.labelpad {
+    padding-right: 8px
 }
 
 
-#teamdeets{
+#teamdeets {
     margin-top: 10px;
     font-size: medium;
     width: 90%;
 }
 
-#idea{
+#idea {
     margin-top: 10px;
     font-size: medium;
     width: 90%;
 }
 
-input{
-    background-color:  rgb(27, 27, 27);
+input {
+    background-color: rgb(27, 27, 27);
     color: white;
     margin: 8px 0;
     box-sizing: border-box;
@@ -55,7 +57,7 @@ input{
 
 input[type=input] {
     height: 25px;
-    width:100%;
+    width: 100%;
 }
 
 #textinput {
@@ -63,9 +65,8 @@ input[type=input] {
     height: 25px;
 }
 
-input[type=number]{
-    height: 25px; 
-    text-align: center; 
-    width:15%;
+input[type=number] {
+    height: 25px;
+    text-align: center;
+    width: 15%;
 }
-

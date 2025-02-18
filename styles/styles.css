@@ -4,6 +4,29 @@ body {
     font-family: 'JetBrains Mono';
     margin-left: 40px;
 }
+
 a {
-    color:aqua
+    color: aqua
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+}
+
+th {
+    font-weight: bold;
+}
+
+
+tr:hover {
+    background-color: #020202;
 }

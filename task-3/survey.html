@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head></head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Survey</title>
+    <header>
+        <nav>
+            <a href="../index.html">Tasks</a> &gt; 
+            <a href="index.html">Home</a> &gt; 
+            <span>Survey</span>
+        </nav>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="photo-gallery.html">Photo Gallery</a> |
+            <a href="digital-clock.html">Digital Clock</a> |
+            <a href="survey.html">Survey</a> |
+            <a href="quiz.html">Quiz</a>
+        </nav>  
+</head>
+
+<body></body>
+    <section></section>
+        <h2>Survey</h2>
+        <form action="submit-survey.html" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="question1">How satisfied are you with our service?</label><br>
+            <input type="radio" id="q1_1" name="question1" value="1" required> 1
+            <input type="radio" id="q1_2" name="question1" value="2"> 2
+            <input type="radio" id="q1_3" name="question1" value="3"> 3
+            <input type="radio" id="q1_4" name="question1" value="4"> 4
+            <input type="radio" id="q1_5" name="question1" value="5"> 5<br><br>
+            
+            <label for="question2">How likely are you to recommend us to a friend?</label><br>
+            <input type="radio" id="q2_1" name="question2" value="1" required> 1
+            <input type="radio" id="q2_2" name="question2" value="2"> 2
+            <input type="radio" id="q2_3" name="question2" value="3"> 3
+            <input type="radio" id="q2_4" name="question2" value="4"> 4
+            <input type="radio" id="q2_5" name="question2" value="5"> 5<br><br>
+            
+            <label for="question3">How would you rate the quality of our products?</label><br>
+            <input type="radio" id="q3_1" name="question3" value="1" required> 1
+            <input type="radio" id="q3_2" name="question3" value="2"> 2
+            <input type="radio" id="q3_3" name="question3" value="3"> 3
+            <input type="radio" id="q3_4" name="question3" value="4"> 4
+            <input type="radio" id="q3_5" name="question3" value="5"> 5<br><br>
+            
+            <label for="feedback">Additional Feedback:</label><br>
+            <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+</body>
+</html>

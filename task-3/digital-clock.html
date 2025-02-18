@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head></head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Digital Clock</title>
+    <header>
+        <nav>
+            <a href="../index.html">Tasks</a> &gt; 
+            <a href="index.html">Home</a> &gt; 
+            <span>Digital Clock</span>
+        </nav>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="photo-gallery.html">Photo Gallery</a> |
+            <a href="digital-clock.html">Digital Clock</a> |
+            <a href="survey.html">Survey</a> |
+            <a href="quiz.html">Quiz</a>
+        </nav>  
+</head>
+<body>
+    <br><br>
+    <div id="clock" style="font-size: large;"></div>
+
+    <script>
+    function updateClock() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        var ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12; 
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+        var strTime = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+        document.getElementById('clock').innerText = strTime;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+    </script>
+</body>

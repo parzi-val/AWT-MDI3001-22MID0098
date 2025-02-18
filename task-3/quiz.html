@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Tasks</a> &gt; 
+            <a href="index.html">Home</a> &gt; 
+            <span>Quiz</span>
+        </nav>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="photo-gallery.html">Photo Gallery</a> |
+            <a href="digital-clock.html">Digital Clock</a> |
+            <a href="survey.html">Survey</a> |
+            <a href="quiz.html">Quiz</a>
+        </nav>  
+    </header>
+
+    <h1>Quiz</h1>
+    <form id="quiz-form">
+        <div class="question">
+            <p>1. What is the capital of France?</p>
+            <input type="radio" id="paris" name="q1" value="Paris">
+            <label for="paris">Paris</label><br>
+            <input type="radio" id="london" name="q1" value="London">
+            <label for="london">London</label><br>
+            <input type="radio" id="rome" name="q1" value="Rome">
+            <label for="rome">Rome</label><br>
+            <input type="radio" id="madrid" name="q1" value="Madrid">
+            <label for="madrid">Madrid</label>
+        </div>
+        <div class="question">
+            <p>2. How many legs does a spider have?</p>
+            <input type="radio" id="2" name="q2" value="2">
+            <label for="2">2</label><br>
+            <input type="radio" id="4" name="q2" value="4">
+            <label for="4">4</label><br>
+            <input type="radio" id="8" name="q2" value="8">
+            <label for="8">8</label><br>
+            <input type="radio" id="6" name="q2" value="6">
+            <label for="6">6</label>
+        </div>
+        <div class="question">
+            <p>3. What is the largest planet in our solar system?</p>
+            <input type="radio" id="earth" name="q3" value="Earth">
+            <label for="earth">Earth</label><br>
+            <input type="radio" id="mars" name="q3" value="Mars">
+            <label for="mars">Mars</label><br>
+            <input type="radio" id="jupiter" name="q3" value="Jupiter">
+            <label for="jupiter">Jupiter</label><br>
+            <input type="radio" id="venus" name="q3" value="Venus">
+            <label for="venus">Venus</label>
+        </div>
+        <div class="question">
+            <p>4. Who wrote 'To Kill a Mockingbird'?</p>
+            <input type="radio" id="lee" name="q4" value="Harper Lee">
+            <label for="lee">Harper Lee</label><br>
+            <input type="radio" id="hemingway" name="q4" value="Ernest Hemingway">
+            <label for="hemingway">Ernest Hemingway</label><br>
+            <input type="radio" id="fitzgerald" name="q4" value="F. Scott Fitzgerald">
+            <label for="fitzgerald">F. Scott Fitzgerald</label><br>
+            <input type="radio" id="orwell" name="q4" value="George Orwell">
+            <label for="orwell">George Orwell</label>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+<script>
+document.getElementById('quiz-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    let score = 0;
+    const answers = {
+        q1: 'Paris',
+        q2: '8',
+        q3: 'Jupiter',
+        q4: 'Harper Lee'
+    };
+    for (let question in answers) {
+        const selected = document.querySelector(`input[name="${question}"]:checked`);
+        if (selected && selected.value === answers[question]) {
+            score++;
+        }
+    }
+    alert('Your score is: ' + score);
+});
+</script>
+</html></div>

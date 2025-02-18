@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Home</title>
+    <script src="script.js"></script>
+    <header>
+        <nav>
+            <a href="../index.html">Tasks</a> &gt; 
+            <a href="index.html">Home</a> &gt; 
+            <span>Task 3</span>
+        </nav>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="photo-gallery.html">Photo Gallery</a> |
+            <a href="digital-clock.html">Digital Clock</a> |
+            <a href="survey.html">Survey</a> |
+            <a href="quiz.html">Quiz</a>
+        </nav>  
+
+</head>
+
+<body>
+    <br><br>
+    <div>
+        <label for="inputText">Enter comma separated values:</label>
+        <input type="text" id="inputText">
+        <button onclick="countVowelsAndConsonants()">Submit</button>
+    </div>
+    <div id="output"></div>
+
+    <script>
+        function countVowelsAndConsonants() {
+            const inputText = document.getElementById('inputText').value;
+            const words = inputText.split(',');
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = '';
+
+            words.forEach(word => {
+                let vowels = 0;
+                let consonants = 0;
+                const cleanedWord = word.trim().toLowerCase();
+
+                for (let char of cleanedWord) {
+                    if ('aeiou'.includes(char)) {
+                        vowels++;
+                    } else if (char >= 'a' && char <= 'z') {
+                        consonants++;
+                    }
+                }
+
+                const result = `Word: ${cleanedWord}, Vowels: ${vowels}, Consonants: ${consonants}`;
+                const p = document.createElement('p');
+                p.textContent = result;
+                outputDiv.appendChild(p);
+            });
+        }
+    </script>
+</body>
+</html>

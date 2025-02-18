@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head></head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Photo Gallery</title>
+    <header>
+        <nav>
+            <a href="../index.html">Tasks</a> &gt; 
+            <a href="index.html">Home</a> &gt; 
+            <span>Photo Gallery</span>
+        </nav>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="photo-gallery.html">Photo Gallery</a> |
+            <a href="digital-clock.html">Digital Clock</a> |
+            <a href="survey.html">Survey</a> |
+            <a href="quiz.html">Quiz</a>
+        </nav>  
+</head>
+<body>
+    <br><br>
+    <div class="gallery">
+
+    </div>
+    <div id="controls">
+        <button id="prev" onclick=showPrev()>Previous</button>
+        <button id="next" onclick=showNext()>Next</button>
+    </div>
+    
+</body>
+
+<script>
+    const images = [
+            '1584528545phpdljDz1.jpeg', 
+            '1656193124phpGEPVjU.jpeg', 
+            '1694687526phplGN8QO.jpeg',
+            "apple-imac-ipad-workplace-38568.jpeg",
+            "banner7.webp",
+            "booking-ticket-online-reservation-travel-flight-concept-H9487C.jpg",
+            "computer-room-black-chair-desk-two-monitors-computer-room-black-chair-desk-two-monitors-348897160.webp",
+            "feeatured.jpg",
+            "images (1).jpeg",
+            "images (2).jpeg",
+            "images.jpeg",
+            "infra_image1.webp",
+            "istockphoto-1014974702-612x612.jpg",
+            "pexels-designecologist-1779487.jpg",
+            "pexels-olly-3762800.jpg",
+            "programmes-offered-header-scaled.webp",
+            "scope11-copy.webp",
+            "Technology_Tower(VIT).jpg",
+            "university-2704306_640.jpg",
+            "VIT-history-img.webp"
+        ]; 
+
+    currentImage = 0
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const gallery = document.querySelector('.gallery');
+
+    
+        const imgElement = document.createElement('img');
+        imgElement.id = 'galleryImage';
+        imgElement.src = `images/${images[currentImage]}`;
+        imgElement.alt = images[currentImage];
+        imgElement.style.margin = '10px';
+        imgElement.style.border = '2px solid #ccc';
+        imgElement.style.borderRadius = '5px';
+        imgElement.style.width = '400px';
+        imgElement.style.height = '400px';
+        gallery.appendChild(imgElement);
+
+    });
+
+    
+    console.log(imgElement)
+    function showPrev() {
+        const imgElement = document.getElementById('galleryImage');
+        currentImage--;
+        if(currentImage < 0) {
+            currentImage = images.length - 1;
+        }
+        imgElement.src = `images/${images[currentImage]}`;
+        imgElement.alt = images[currentImage];
+    }
+
+    function showNext(){
+        const imgElement = document.getElementById('galleryImage');
+        currentImage++;
+        if(currentImage >= images.length) {
+            currentImage = 0;
+        }
+        imgElement.src = `images/${images[currentImage]}`;
+        imgElement.alt = images[currentImage];
+    }
+</script>

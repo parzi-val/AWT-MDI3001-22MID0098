@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Task jQuery</title>
+    <nav>
+        <a href="../index.html">Tasks</a> &gt; 
+        <a href="index.html">Home</a> &gt; 
+        <span>Contact</span>
+    </nav>
+    <br>
+</head>
+<style>
+    table {
+        width:auto;
+        border-style:none;
+    }
+
+</style>
+<body>
+<form id="registrationForm">
+    <fieldset>
+        <legend>Registration Form</legend>
+
+        <table class="no-border">
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" id="name" name="name" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="text" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone</label></td>
+                <td><input type="tel" id="phone" name="phone"></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address</label></td>
+                <td><input type="text" id="address" name="address"></td>
+            </tr>
+            <tr></tr>
+                <td><label for="city">City</label></td>
+                <td><input type="text" id="city" name="city"></td>
+            </tr>
+            <tr>
+                <td><label for="state">State</label></td>
+                <td><input type="text" id="state" name="state"></td>
+            </tr>
+            <tr>
+                <td><label for="zip">Zip Code</label></td>
+                <td><input type="text" id="zip" name="zip" required></td>
+            </tr>
+            <tr>
+                <td><label for="country">Country</label></td>
+                <td><input type="text" id="country" name="country"></td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <input type="submit" value="Register">
+</form>
+<script>
+$(document).ready(function() {
+    $('#registrationForm').submit(function(event) {
+        console.log("Submit event triggered");
+        var isValid = true;
+
+        var email = $('#email').val();
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (!emailPattern.test(email)) {
+            alert('Please enter a valid email address.');
+            isValid = false;
+        }
+
+        var zip = $('#zip').val();
+        var zipPattern = /^\d{5}$/;
+        if (!zipPattern.test(zip)) {
+            alert('Please enter a valid 5-digit zip code.');
+            isValid = false;
+        }
+
+        if (!isValid) {
+            console.log("Validation failed. Preventing form submission.");
+            event.preventDefault();
+            return false; // Extra safeguard
+        }
+
+        console.log("Validation passed, preventing submission.");
+        event.preventDefault(); // Explicitly prevent default behavior
+    });
+});
+
+</script>
+</body>
